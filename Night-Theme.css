@@ -79,7 +79,11 @@
     .cke_wysiwyg_frame,
     .cke_wysiwyg_div,
     .main_menu > li.dropdown .dropdown_menu > a:active,
-    .ipsToggle.ipsToggle_off
+    .ipsToggle.ipsToggle_off,
+    .ipsAreaBackground_light .ipsButtonRow li > a:not( .ipsButtonRow_active),
+    .ipsAreaBackground_light .ipsButtonRow li > button:not( .ipsButtonRow_active),
+    .ipsAreaBackground_light .ipsButtonRow li > span:not( .ipsButtonRow_active),
+    .cPastLeaders_cell
     {
         background-color: #242f3d;
     }
@@ -119,7 +123,9 @@
     .ipsApp .ipsButtonBar .ipsPagination .ipsPagination_first a,
     .ipsApp .ipsButtonBar .ipsPagination .ipsPagination_last a,
     .ipsTabs,
-    #snow_toggle_button.enabled > .switcher
+    #snow_toggle_button.enabled > .switcher,
+    .ipsTabs.ipsTabs_stretch [role="tablist"] > li,
+    .cToken
     {
         background-color: #276899
     }
@@ -172,14 +178,17 @@
     .ipsUserPhoto,
     .ipsComposeArea_editor,
     .ipsButton.ipsButton_link,
-    .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane
+    .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane,
+    .ipsTabs_panels.ipsTabs_contained,
+    .cPastLeaders_title span
     {
         background-color: transparent;
     }
 
     .ipsReact_reactCount,
     .ipsMenu_itemCount,
-    .ipsSideMenu_itemCount
+    .ipsSideMenu_itemCount,
+    .ipsCode
     {
         background-color: #283a4d;
     }
@@ -223,7 +232,12 @@
     .ipsApp .ipsField_dummy,
     .ipsQuote_citation,
     .ipsAreaBackground,
-    .ipsAreaBackground_light
+    .ipsAreaBackground_light,
+    .ipsTabs.ipsTabs_contained,
+    .ipsTabs_panels.ipsTabs_contained,
+    .ipsButtonRow li > a,
+    .ipsButtonRow li > button,
+    .ipsButtonRow li > span
     {
         background-color: #19242f;
     }
@@ -348,7 +362,15 @@
     #cbInput_container input,
     .cStreamFilter > li > a.cStreamFilter_active,
     .ipsStreamItem.ipsStreamItem_contentBlock,
-    .ipsAlert
+    .ipsAlert,
+    .ipsAreaBackground_light .ipsButtonRow li > a:not( .ipsButtonRow_active),
+    .ipsAreaBackground_light .ipsButtonRow li > button:not( .ipsButtonRow_active),
+    .ipsAreaBackground_light .ipsButtonRow li > span:not( .ipsButtonRow_active),
+    .cPastLeaders_cell:after,
+    .ipsButtonRow li > a,
+    .ipsButtonRow li > button,
+    .ipsButtonRow li > span,
+    .cForumMiniList.cForumMiniList_multiRoot > li > a
     {
         Color: #C5C5C5;
     }
@@ -383,7 +405,8 @@
     .ipsPagination .ipsPagination_page.ipsPagination_active a,
     .ipsButtonBar .ipsPagination .ipsPagination_page.ipsPagination_active a,
     .ipsButtonBar .ipsPagination .ipsPagination_pageJump a,
-    .cke_combo__fontsize .cke_combo_text
+    .cke_combo__fontsize .cke_combo_text,
+    .fa-trophy:before
     {
         color: #eaeaea;
     }
@@ -515,7 +538,10 @@
     .ipsCode,
     .ipsBox,
     .ipsMenu,
-    html[dir="ltr"] .ipsReact_blurb:not( .ipsHide) + .ipsReact_types
+    html[dir="ltr"] .ipsReact_blurb:not( .ipsHide) + .ipsReact_types,
+    .ipsTabs.ipsTabs_contained,
+    .ipsTabs_panels.ipsTabs_contained,
+    .cPastLeaders_title:before
     {
         border-color: #101921;
     }
@@ -588,6 +614,22 @@
     }
 
     /* Other */
+    .ipsApp .ipsField_autocomplete,
+    .ipsApp textarea,
+    .ipsApp input[type="text"],
+    .ipsApp input[type="password"],
+    .ipsApp input[type="datetime"],
+    .ipsApp input[type="datetime-local"],
+    .ipsApp input[type="date"],
+    .ipsApp input[type="time"],
+    .ipsApp input[type="number"],
+    .ipsApp input[type="email"],
+    .ipsApp input[type="url"],
+    .ipsApp .ipsField_dummy
+    {
+        box-shadow: none;
+    }
+
     a:hover,
     a:active,
     .ipsTabs_activeItem:hover
@@ -641,6 +683,20 @@
     {
         border: 2px solid #1a2430;
     }
+
+    .cPastLeaders_cell:after
+    {
+        opacity: 0.5;
+    }
+
+
+    .ipsReact_button
+    {
+
+
+        filter: grayscale(47%) hue-rotate(360deg) saturate(125%) contrast(56%);
+    }
+
 
 
     /* Scroll */
@@ -726,8 +782,11 @@
         border-color: transparent transparent #276899 #276899;
     }
 
+    .fa-pencil-square:before
+    {
+        content: '🐸';
+    }
 
-    /* Icons ReversColor */
     .cke_button__bold_icon
     {
         background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 0px !important;
