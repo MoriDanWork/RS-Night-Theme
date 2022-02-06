@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name           RedServer DarkTheme v2.0
+@name           RedServer DarkTheme
 @namespace      https://github.com/MoriDanWork/RS-Night-Theme
-@version        2.0-beta
+@version        2.0.3
 @description    Night Theme for RedServer Forum.
 @author         MoriDanWork
 ==/UserStyle== */
@@ -41,7 +41,8 @@
     .ipsAutocompleteMenu_item[data-selected],
     .ipsComment.ipsFieldRow_fullWidth.ipsAreaBackground_light.ipsPad,
     .ipsComment_subComments .ipsComment,
-    .cProfileSidebarBlock.ipsLeaderboard_trophy_1
+    .cProfileSidebarBlock.ipsLeaderboard_trophy_1,
+    .ipsApp select
     {
         background-color: #1F2936;
     }
@@ -85,7 +86,9 @@
     .ipsAreaBackground_light .ipsButtonRow li > button:not( .ipsButtonRow_active),
     .ipsAreaBackground_light .ipsButtonRow li > span:not( .ipsButtonRow_active),
     .cPastLeaders_cell,
-    .cProfileRepScore_neutral
+    .cProfileRepScore_neutral,
+    .ipsSideMenu_item.ipsSideMenu_itemActive,
+    .cPollVoteBar
     {
         background-color: #242f3d;
     }
@@ -147,7 +150,8 @@
     .ipsBox:not( .ipsBox_transparent):not( .ipsModerated),
     p.ipsType_reset.ipsPad_half,
     a.cke_button_on,
-    .ipsHovercard
+    .ipsHovercard,
+    #elSearchExpanded .ipsSideMenu_list
     {
         background-color: #1b2734;
     }
@@ -168,7 +172,13 @@
     .ipsMenu_item[data-selected] span,
     .ipsMenu_item.ipsMenu_hover,
     .cke_top,
-    .ipsFieldRow_section
+    .ipsFieldRow_section,
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked,
+    select option:focus-within,
+    select option:target
     {
         background-color: #17222d;
     }
@@ -219,7 +229,8 @@
     .ipsFollow .ipsCommentCount,
     .ipsStream .ipsStreamItem_contentType,
     .ipsAttachment_progress,
-    .ipsFollow .ipsCommentCount
+    .ipsFollow .ipsCommentCount,
+    #elSearch
     {
         background-color: #DEDEDE;
     }
@@ -381,7 +392,13 @@
     .cForumMiniList.cForumMiniList_multiRoot > li > a,
     .ipsType_small,
     .ipsType_reset,
-    .cProfileRepScore_neutral
+    .cProfileRepScore_neutral,
+    .ipsApp select,
+    select option:hover,
+    select option:focus,
+    select option:active,
+    select option:checked,
+    .cPollVoteBar > span.cPollVoteBar_inside:after
     {
         Color: #C5C5C5;
     }
@@ -431,7 +448,12 @@
     .fa-pencil-square:before,
     .fa-user:before,
     .fa-plus:before,
-    .fa-star:before
+    .fa-star:before,
+    .fa-search:before,
+    .fa-fire:before,
+    .fa-navicon:before,
+    .fa-reorder:before,
+    .fa-bars:before
     {
         color: #bdbdbd;
     }
@@ -554,7 +576,8 @@
     .ipsTabs.ipsTabs_contained,
     .ipsTabs_panels.ipsTabs_contained,
     .cPastLeaders_title:before,
-    .ipsHovercard
+    .ipsHovercard,
+    .ipsApp select
     {
         border-color: #101921;
     }
@@ -581,7 +604,9 @@
 
     .ipsMenu_headerBar,
     .ipsMenu_footerBar,
-    html[dir="ltr"] .cMessage_members > ol > li
+    html[dir="ltr"] .cMessage_members > ol > li,
+    #elSearchExpanded .ipsSideMenu_list,
+    #elSearchExpanded .ipsMenu_title
     {
         border-color: #19242f;
     }
@@ -638,7 +663,19 @@
     .ipsApp input[type="number"],
     .ipsApp input[type="email"],
     .ipsApp input[type="url"],
-    .ipsApp .ipsField_dummy
+    .ipsApp .ipsField_dummy,
+    .ipsApp .ipsField_autocomplete:focus,
+    .ipsApp textarea:focus,
+    .ipsApp input[type="text"]:focus,
+    .ipsApp input[type="password"]:focus,
+    .ipsApp input[type="datetime"]:focus,
+    .ipsApp input[type="datetime-local"]:focus,
+    .ipsApp input[type="date"]:focus,
+    .ipsApp input[type="time"]:focus,
+    .ipsApp input[type="number"]:focus,
+    .ipsApp input[type="email"]:focus,
+    .ipsApp input[type="url"]:focus,
+    .ipsApp .ipsField_dummy:focus
     {
         box-shadow: none;
     }
@@ -702,15 +739,20 @@
         opacity: 0.5;
     }
 
+    .ipsSideMenu_item.ipsSideMenu_itemActive
+    {
+        margin: 1px;
+    }
 
     .ipsReact_button
     {
-
-
         filter: grayscale(47%) hue-rotate(360deg) saturate(125%) contrast(56%);
     }
 
-
+    #elSearchExpanded
+    {
+        border-radius: 0px 0px 5px 5px;
+    }
 
     /* Scroll */
     ::-webkit-scrollbar-track
@@ -898,4 +940,4 @@
     }
 }
 
-/* Spasibo za Beta Test, Semnadtsataia <3 */
+/* Spasibo za Beta Test, Semnadtsataia <3 🐸*/
