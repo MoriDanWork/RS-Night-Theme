@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           RedServer DarkTheme v2.0
 @namespace      https://github.com/MoriDanWork/RS-Night-Theme
-@version        2.0
-@description    Night Theme for RedServer Forum
+@version        2.0-beta
+@description    Night Theme for RedServer Forum.
 @author         MoriDanWork
 ==/UserStyle== */
 @-moz-document url-prefix("https://redserver.su/forum/")
@@ -40,7 +40,8 @@
     .ipsMenu,
     .ipsAutocompleteMenu_item[data-selected],
     .ipsComment.ipsFieldRow_fullWidth.ipsAreaBackground_light.ipsPad,
-    .ipsComment_subComments .ipsComment
+    .ipsComment_subComments .ipsComment,
+    .cProfileSidebarBlock.ipsLeaderboard_trophy_1
     {
         background-color: #1F2936;
     }
@@ -83,7 +84,8 @@
     .ipsAreaBackground_light .ipsButtonRow li > a:not( .ipsButtonRow_active),
     .ipsAreaBackground_light .ipsButtonRow li > button:not( .ipsButtonRow_active),
     .ipsAreaBackground_light .ipsButtonRow li > span:not( .ipsButtonRow_active),
-    .cPastLeaders_cell
+    .cPastLeaders_cell,
+    .cProfileRepScore_neutral
     {
         background-color: #242f3d;
     }
@@ -125,6 +127,9 @@
     .ipsTabs,
     #snow_toggle_button.enabled > .switcher,
     .ipsTabs.ipsTabs_stretch [role="tablist"] > li,
+    .ipsLeaderboard_trophy_1,
+    .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:before,
+    .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:after,
     .cToken
     {
         background-color: #276899
@@ -141,7 +146,8 @@
     .ipsDataList,
     .ipsBox:not( .ipsBox_transparent):not( .ipsModerated),
     p.ipsType_reset.ipsPad_half,
-    a.cke_button_on
+    a.cke_button_on,
+    .ipsHovercard
     {
         background-color: #1b2734;
     }
@@ -161,7 +167,8 @@
     .ipsMenu_item[data-selected] a,
     .ipsMenu_item[data-selected] span,
     .ipsMenu_item.ipsMenu_hover,
-    .cke_top
+    .cke_top,
+    .ipsFieldRow_section
     {
         background-color: #17222d;
     }
@@ -315,6 +322,7 @@
     #elFooterSocialLinks > li > a,
     .main_menu > li,
     .main_menu > li > a,
+    .ipsFieldRow_section,
     #elProfileStats,
     .cAnnouncementPageTop,
     .cAnnouncementPageTop a,
@@ -370,7 +378,10 @@
     .ipsButtonRow li > a,
     .ipsButtonRow li > button,
     .ipsButtonRow li > span,
-    .cForumMiniList.cForumMiniList_multiRoot > li > a
+    .cForumMiniList.cForumMiniList_multiRoot > li > a,
+    .ipsType_small,
+    .ipsType_reset,
+    .cProfileRepScore_neutral
     {
         Color: #C5C5C5;
     }
@@ -419,7 +430,8 @@
     .fa-external-link-square:before,
     .fa-pencil-square:before,
     .fa-user:before,
-    .fa-plus:before
+    .fa-plus:before,
+    .fa-star:before
     {
         color: #bdbdbd;
     }
@@ -541,7 +553,8 @@
     html[dir="ltr"] .ipsReact_blurb:not( .ipsHide) + .ipsReact_types,
     .ipsTabs.ipsTabs_contained,
     .ipsTabs_panels.ipsTabs_contained,
-    .cPastLeaders_title:before
+    .cPastLeaders_title:before,
+    .ipsHovercard
     {
         border-color: #101921;
     }
@@ -771,6 +784,18 @@
         border-color: #17222d transparent transparent transparent;
     }
 
+    .ipsHovercard_stemTop .ipsHovercard_stem:before
+    {
+
+        border-color: #1F2936 transparent transparent transparent;
+    }
+
+    .ipsHovercard_stemTop .ipsHovercard_stem
+    {
+
+        border-color: #1F2936 transparent transparent transparent;
+    }
+
     .ipsMenu.ipsMenu_topCenter:before
     {
         border-color: #101921 transparent transparent transparent;
@@ -872,3 +897,5 @@
         background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -696px !important;
     }
 }
+
+/* Spasibo za Beta Test, Semnadtsataia <3 */
