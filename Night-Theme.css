@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RedServer DarkTheme
 @namespace      https://github.com/MoriDanWork/RS-Night-Theme
-@version        2.0.3
+@version        2.0.4
 @description    Night Theme for RedServer Forum.
 @author         MoriDanWork
 ==/UserStyle== */
@@ -10,7 +10,7 @@
     /* Body */
     body
     {
-        background-image: url("https://i.imgur.com/P12NxHr.jpg");
+        background-image: url("https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Background.jpg");
         background-color: #1d244f;
         background-attachment: fixed;
         background-size: cover;
@@ -88,7 +88,11 @@
     .cPastLeaders_cell,
     .cProfileRepScore_neutral,
     .ipsSideMenu_item.ipsSideMenu_itemActive,
-    .cPollVoteBar
+    .cPollVoteBar,
+    .cPost.ipsModerated,
+    .cPost.ipsModerated .cAuthorPane,
+    .cPost.ipsComment_selected:not( .ipsComment_moderated),
+    .ipsModerated
     {
         background-color: #242f3d;
     }
@@ -133,7 +137,8 @@
     .ipsLeaderboard_trophy_1,
     .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:before,
     .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:after,
-    .cToken
+    .cToken,
+    .ipsCustomInput input[type="checkbox"]:checked + span
     {
         background-color: #276899
     }
@@ -197,7 +202,8 @@
     .ipsButton.ipsButton_link,
     .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane,
     .ipsTabs_panels.ipsTabs_contained,
-    .cPastLeaders_title span
+    .cPastLeaders_title span,
+    .cke_inner
     {
         background-color: transparent;
     }
@@ -230,7 +236,8 @@
     .ipsStream .ipsStreamItem_contentType,
     .ipsAttachment_progress,
     .ipsFollow .ipsCommentCount,
-    #elSearch
+    #elSearch,
+    .ipsCustomInput > span
     {
         background-color: #DEDEDE;
     }
@@ -255,7 +262,8 @@
     .ipsTabs_panels.ipsTabs_contained,
     .ipsButtonRow li > a,
     .ipsButtonRow li > button,
-    .ipsButtonRow li > span
+    .ipsButtonRow li > span,
+    hr.ipsHr
     {
         background-color: #19242f;
     }
@@ -398,7 +406,8 @@
     select option:focus,
     select option:active,
     select option:checked,
-    .cPollVoteBar > span.cPollVoteBar_inside:after
+    .cPollVoteBar > span.cPollVoteBar_inside:after,
+    .ipsModerated .ipsType_light
     {
         Color: #C5C5C5;
     }
@@ -528,14 +537,14 @@
     .main_menu > li.selected:not(.dropdown) > a,
     .main_menu > li.selected.dropdown:not(:hover) > a,
     .main_menu > li:not(.dropdown) > a:active,
-    html[dir="ltr"] .ipsStream.ipsStream_withTimeline
+    html[dir="ltr"] .ipsStream.ipsStream_withTimeline,
+    .ipsComment.ipsComment_selected
     {
         border-color: #276899;
     }
-
-    hr.ipsHr,
     .ipsMenu_sep,
-    #elSearchExpanded .ipsSideMenu_list
+    #elSearchExpanded .ipsSideMenu_list,
+    .ipsBox.ipsModerated
     {
         border-color: #131d26;
     }
@@ -606,7 +615,8 @@
     .ipsMenu_footerBar,
     html[dir="ltr"] .cMessage_members > ol > li,
     #elSearchExpanded .ipsSideMenu_list,
-    #elSearchExpanded .ipsMenu_title
+    #elSearchExpanded .ipsMenu_title,
+    .ipsItemControls
     {
         border-color: #19242f;
     }
@@ -675,7 +685,9 @@
     .ipsApp input[type="number"]:focus,
     .ipsApp input[type="email"]:focus,
     .ipsApp input[type="url"]:focus,
-    .ipsApp .ipsField_dummy:focus
+    .ipsApp .ipsField_dummy:focus,
+    a.cke_combo_button,
+    .ipsComment.ipsComment_selected
     {
         box-shadow: none;
     }
@@ -697,6 +709,16 @@
         background: #283a4dc4;
     }
 
+    .ipsItemStatus.ipsItemStatus_large.ipsItemStatus_read
+    {
+        background: #3a434b;
+    }
+
+    .cke_inner
+    {
+        border: 1px solid #1b2734;
+    }
+
     .ipsButton.ipsButton_link
     {
         border-left: 0;
@@ -712,6 +734,12 @@
         border-right-color: #1f2936;
     }
 
+    .ipsCustomInput input:checked + span,
+    .ipsCustomInput input:focus + span
+    {
+        border-color: #276899 !important;
+    }
+
     .ipsCode
     {
         border-left: 5px solid #276899 !important;
@@ -720,7 +748,6 @@
     a.cke_combo_button
     {
         background-image: none;
-        box-shadow: none;
     }
 
     .ipsComposeArea_dummy,
@@ -856,87 +883,88 @@
 
     .cke_button__bold_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 0px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 0px !important;
     }
 
     .cke_button__italic_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -24px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -24px !important;
     }
 
     .cke_button__underline_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -120px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -120px !important;
     }
 
     .cke_button__strike_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -48px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -48px !important;
     }
 
     .cke_button__removeformat_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -912px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -912px !important;
     }
 
     .cke_button__justifyleft_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -768px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -768px !important;
     }
 
     .cke_button__justifycenter_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -744px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -744px !important;
     }
 
     .cke_button__justifyright_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -792px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -792px !important;
     }
 
     .cke_button__justifyblock_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -720px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -720px !important;
     }
 
     .cke_ltr .cke_button__numberedlist_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -888px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -888px !important;
     }
 
     .cke_ltr .cke_button__bulletedlist_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -840px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -840px !important;
     }
 
     .cke_button__textcolor_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -312px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -312px !important;
     }
 
     .cke_button__ipsemoticon_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -456px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -456px !important;
     }
 
     .cke_button__ipsquote_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -672px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -672px !important;
     }
 
     .cke_button__ipslink_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -528px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -528px !important;
     }
 
     .cke_button__ipscode_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -432px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -432px !important;
     }
 
     .cke_button__ipsspoiler_icon
     {
-        background: url(https://i.imgur.com/qEjdJwJ.png) no-repeat 0 -696px !important;
+        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -696px !important;
     }
 }
+
 /* Spasibo za Beta Test, Semnadtsataia <3 🐸*/
