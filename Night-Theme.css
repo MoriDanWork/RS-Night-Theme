@@ -476,7 +476,8 @@
     a:active,
     .ipsTabs_activeItem:hover,
     .main_menu > li.dropdown:hover > a,
-    .main_menu > li.dropdown:hover:after
+    .main_menu > li.dropdown:hover:after,
+    .ipsType_noLinkStyling:hover
     {
         color: #5080B6;
     }
@@ -528,7 +529,8 @@
     .ipsApp input[type="url"],
     .ipsApp .ipsField_dummy,
     .ipsAreaBackground,
-    .ipsAreaBackground_light
+    .ipsAreaBackground_light,
+    .ipsType_noLinkStyling
     {
         color: #8d9aa6;
     }
