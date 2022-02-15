@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           RedServer DarkTheme
 @namespace      https://github.com/MoriDanWork/RS-Night-Theme
-@version        2.0.4
+@version        2.0.5
 @description    Night Theme for RedServer Forum.
 @author         MoriDanWork
 ==/UserStyle== */
@@ -92,7 +92,8 @@
     .cPost.ipsModerated,
     .cPost.ipsModerated .cAuthorPane,
     .cPost.ipsComment_selected:not( .ipsComment_moderated),
-    .ipsModerated
+    .ipsModerated,
+    body.unloaded #ipsEmbedLoading
     {
         background-color: #242f3d;
     }
@@ -759,6 +760,15 @@
     .ipsReactOverview ul img
     {
         border: 2px solid #1a2430;
+    }
+    
+    #ipsEmbedLoading:before,
+    #ipsEmbedLoading span:before,
+    #ipsEmbedLoading:after,
+    #ipsEmbedLoading span:after,
+    body[data-role="internalEmbed"] #ipsEmbedLoading span:after
+    {
+        opacity: 0;
     }
 
     .cPastLeaders_cell:after
