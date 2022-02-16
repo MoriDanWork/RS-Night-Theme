@@ -208,7 +208,8 @@
     .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane,
     .ipsTabs_panels.ipsTabs_contained,
     .cPastLeaders_title span,
-    .cke_inner
+    .cke_inner,
+    .ipsTooltip
     {
         background-color: transparent;
     }
