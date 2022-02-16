@@ -265,7 +265,9 @@
     .ipsButtonRow li > a,
     .ipsButtonRow li > button,
     .ipsButtonRow li > span,
-    hr.ipsHr
+    hr.ipsHr,
+    .ipsApp select:not( [multiple]),
+    .ipsQuote_citation
     {
         background-color: #19242f;
     }
@@ -614,7 +616,8 @@
     .ipsApp .ipsField_dummy,
     .ipsDataItem,
     .ipsButton_split > .ipsButton.ipsButton_link,
-    html[dir] .ipsButton_split > li > .ipsButton.ipsButton_link
+    html[dir] .ipsButton_split > li > .ipsButton.ipsButton_link,
+    .ipsQuote_citation
     {
         border-color: #131D27;
     }
@@ -734,7 +737,9 @@
 
     .ipsQuote_citation
     {
-        margin: 0px -17px;
+        margin: 0px -16px;
+        border-width: 0px 1px 0px 1px;
+        border-style: solid;
     }
 
     html[dir="ltr"] .ipsComposeArea_unavailable.ipsComposeArea_withPhoto .ipsComposeArea_editor:before
@@ -920,7 +925,6 @@
 
     .ipsApp select:not( [multiple])
     {
-        background-color: #19242f;
         background-image: url("https://redserver.su/forum/public/set_resources_7/84c1e40ea0e759e3f1505eb1788ddf3c_select_dropdown.png");
     }
 
