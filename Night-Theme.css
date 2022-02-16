@@ -139,7 +139,8 @@
     .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:before,
     .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:after,
     .cToken,
-    .ipsCustomInput input[type="checkbox"]:checked + span
+    .ipsCustomInput input[type="checkbox"]:checked + span,
+    .ipsApp .ipsButton_normal
     {
         background-color: #276899
     }
@@ -408,7 +409,9 @@
     select option:active,
     select option:checked,
     .cPollVoteBar > span.cPollVoteBar_inside:after,
-    .ipsModerated .ipsType_light
+    .ipsModerated .ipsType_light,
+    .ipsApp .ipsButton_normal,
+    .ipsApp label:not( .ipsField_unlimited)
     {
         Color: #C5C5C5;
     }
@@ -750,6 +753,11 @@
         border-left: 5px solid #276899 !important;
     }
 
+    .ipsApp select:focus-visible
+    {
+        outline: 1px solid #276899 !important;
+    }
+
     a.cke_combo_button
     {
         background-image: none;
@@ -793,6 +801,11 @@
     #elSearchExpanded
     {
         border-radius: 0px 0px 5px 5px;
+    }
+
+    ::-webkit-input-placeholder
+    {
+        Color: #b3b3b3;
     }
 
     /* Scroll */
@@ -871,7 +884,7 @@
     {
         border-color: transparent #17222d transparent transparent;
     }
-    
+
     .ipsMenu.ipsMenu_topCenter:after
     {
         border-color: #17222d transparent transparent transparent;
@@ -903,6 +916,12 @@
     .fa-pencil-square:before
     {
         content: '🐸';
+    }
+
+    .ipsApp select:not( [multiple])
+    {
+        background-color: #19242f;
+        background-image: url("https://redserver.su/forum/public/set_resources_7/84c1e40ea0e759e3f1505eb1788ddf3c_select_dropdown.png");
     }
 
     .cke_button__bold_icon
