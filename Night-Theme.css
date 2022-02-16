@@ -140,7 +140,10 @@
     .ipsLeaderboard_trophy_1.ipsLeaderboard_trophy:after,
     .cToken,
     .ipsCustomInput input[type="checkbox"]:checked + span,
-    .ipsApp .ipsButton_normal
+    .ipsApp .ipsButton_normal,
+    .ipsType_pageTitle [data-role="editableTitle"]:hover,
+    .ipsType_pageTitle[data-role="editableTitle"]:hover,
+    .ipsType_editable:hover
     {
         background-color: #276899
     }
@@ -413,7 +416,10 @@
     .cPollVoteBar > span.cPollVoteBar_inside:after,
     .ipsModerated .ipsType_light,
     .ipsApp .ipsButton_normal,
-    .ipsApp label:not( .ipsField_unlimited)
+    .ipsApp label:not( .ipsField_unlimited),
+    .ipsType_pageTitle [data-role="editableTitle"]:hover,
+    .ipsType_pageTitle[data-role="editableTitle"]:hover,
+    .ipsType_editable:hover
     {
         Color: #C5C5C5;
     }
