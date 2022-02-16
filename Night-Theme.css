@@ -477,7 +477,8 @@
     .ipsTabs_activeItem:hover,
     .main_menu > li.dropdown:hover > a,
     .main_menu > li.dropdown:hover:after,
-    .ipsType_noLinkStyling:hover
+    .ipsType_noLinkStyling:hover,
+    .ipsModerated a
     {
         color: #5080B6;
     }
@@ -545,6 +546,7 @@
     {
         border-color: #276899;
     }
+
     .ipsMenu_sep,
     #elSearchExpanded .ipsSideMenu_list,
     .ipsBox.ipsModerated
@@ -763,7 +765,7 @@
     {
         border: 2px solid #1a2430;
     }
-    
+
     #ipsEmbedLoading:before,
     #ipsEmbedLoading span:before,
     #ipsEmbedLoading:after,
@@ -840,6 +842,16 @@
         border-color: transparent transparent #17222d transparent;
     }
 
+    .ipsHovercard_stemBottom .ipsHovercard_stem
+    {
+        border-color: transparent transparent #1b2734 transparent;
+    }
+
+    .ipsHovercard_stemBottom .ipsHovercard_stem:before
+    {
+        border-color: transparent transparent #101921 transparent;
+    }
+
     html[dir="ltr"] .ipsFollow .ipsCommentCount:after
     {
         border-color: transparent #dedede transparent transparent;
@@ -847,7 +859,7 @@
 
     html[dir="ltr"] .ipsComposeArea_withPhoto .ipsComposeArea_editor:before
     {
-        border-color: transparent rgb(36 47 61) transparent transparent;
+        border-color: transparent #242f3d transparent transparent;
     }
 
     html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem:after
@@ -859,7 +871,7 @@
     {
         border-color: transparent #17222d transparent transparent;
     }
-
+    
     .ipsMenu.ipsMenu_topCenter:after
     {
         border-color: #17222d transparent transparent transparent;
