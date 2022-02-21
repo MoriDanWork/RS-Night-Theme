@@ -93,7 +93,8 @@
     .cPost.ipsModerated .cAuthorPane,
     .cPost.ipsComment_selected:not( .ipsComment_moderated),
     .ipsModerated,
-    body.unloaded #ipsEmbedLoading
+    body.unloaded #ipsEmbedLoading,
+    .ipsHovercard_loading
     {
         background-color: #242f3d;
     }
@@ -209,8 +210,7 @@
     .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane,
     .ipsTabs_panels.ipsTabs_contained,
     .cPastLeaders_title span,
-    .cke_inner,
-    .ipsTooltip
+    .cke_inner
     {
         background-color: transparent;
     }
@@ -218,7 +218,8 @@
     .ipsReact_reactCount,
     .ipsMenu_itemCount,
     .ipsSideMenu_itemCount,
-    .ipsCode
+    .ipsCode,
+    .ipsTooltip
     {
         background-color: #283a4d;
     }
@@ -421,7 +422,8 @@
     .ipsApp label:not( .ipsField_unlimited),
     .ipsType_pageTitle [data-role="editableTitle"]:hover,
     .ipsType_pageTitle[data-role="editableTitle"]:hover,
-    .ipsType_editable:hover
+    .ipsType_editable:hover,
+    .ipsTooltip
     {
         Color: #C5C5C5;
     }
@@ -477,7 +479,8 @@
     .fa-fire:before,
     .fa-navicon:before,
     .fa-reorder:before,
-    .fa-bars:before
+    .fa-bars:before,
+    .icon-spinner2:before
     {
         color: #bdbdbd;
     }
@@ -733,6 +736,11 @@
     {
         background: #3a434b;
     }
+    
+    #snow_toggle_button.enabled:hover > .switcher
+    {
+        background: #1e7abf;
+    }
 
     .cke_inner
     {
@@ -743,7 +751,7 @@
     {
         border-left: 0;
     }
-
+    
     .ipsQuote_citation
     {
         margin: 0px -16px;
@@ -893,6 +901,11 @@
     {
         border-color: transparent #242F3D transparent transparent;
     }
+    
+    .ipsHovercard_loading:after
+    {
+        border-color: #242F3D transparent transparent transparent;
+    }
 
     html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock:before
     {
@@ -906,13 +919,11 @@
 
     .ipsHovercard_stemTop .ipsHovercard_stem:before
     {
-
         border-color: #1F2936 transparent transparent transparent;
     }
 
     .ipsHovercard_stemTop .ipsHovercard_stem
     {
-
         border-color: #1F2936 transparent transparent transparent;
     }
 
@@ -920,6 +931,14 @@
     {
         border-color: #101921 transparent transparent transparent;
     }
+    
+    .ipsTooltip.ipsTooltip_top:after {
+	border-color: #283a4d transparent transparent transparent;
+}
+
+.ipsTooltip.ipsTooltip_bottom:after {
+	border-color: transparent transparent #283a4d transparent;
+}
 
     html[dir="ltr"] .ipsTags .ipsTag:before,
     html[dir="ltr"] .ipsTag_prefix:before
