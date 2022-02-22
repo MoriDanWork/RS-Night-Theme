@@ -762,7 +762,8 @@
     .cke_combo_on a.cke_combo_button,
     .cke_combo_on a.cke_combo_button:hover,
     .cke_combo_on a.cke_combo_button:focus,
-    .cke_combo_on a.cke_combo_button:active
+    .cke_combo_on a.cke_combo_button:active,
+    .ipsApp .cke_widget_wrapper:hover .cke_widget_editable.cke_widget_editable_focused
     {
         box-shadow: none;
     }
@@ -809,6 +810,19 @@
         margin: 0px -16px;
         border-width: 0px 1px 1px 1px;
         border-style: solid;
+    }
+
+    .ipsApp .cke_widget_wrapper:hover > .cke_widget_element
+    {
+        outline-color: #1f2936;
+        outline-width: 2px;
+    }
+
+    .ipsApp .cke_widget_wrapper:hover .cke_widget_editable,
+    .cke_widget_wrapper.cke_widget_focused > .cke_widget_element,
+    .cke_widget_wrapper .cke_widget_editable.cke_widget_editable_focused
+    {
+        outline-color: #242f3d;
     }
 
     html[dir="ltr"] .ipsComposeArea_unavailable.ipsComposeArea_withPhoto .ipsComposeArea_editor:before
