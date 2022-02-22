@@ -42,7 +42,8 @@
     .ipsComment.ipsFieldRow_fullWidth.ipsAreaBackground_light.ipsPad,
     .ipsComment_subComments .ipsComment,
     .cProfileSidebarBlock.ipsLeaderboard_trophy_1,
-    .ipsApp select
+    .ipsApp select,
+    .ipsSelectTree_nodes
     {
         background-color: #1F2936;
     }
@@ -95,7 +96,11 @@
     .cke_combo_off a.cke_combo_button:hover,
     .cke_combo_off a.cke_combo_button:focus,
     .cke_combo_off a.cke_combo_button:active,
-    .cke_combo_on a.cke_combo_button
+    .cke_combo_on a.cke_combo_button,
+    .cStreamForm_list li a.ipsSideMenu_item.ipsSideMenu_itemActive + .cStreamForm_menu,
+    .cStreamForm_list li a.ipsSideMenu_item:not( .ipsSideMenu_itemActive):hover + .cStreamForm_menu,
+    .ipsSelectTree_selected,
+    .ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled):hover
     {
         background-color: #242f3d;
     }
@@ -165,7 +170,8 @@
     a.cke_button_on,
     .ipsHovercard,
     #elSearchExpanded .ipsSideMenu_list,
-    a.cke_combo_button
+    a.cke_combo_button,
+    .ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled).ipsSelectTree_selected:hover
     {
         background-color: #1b2734;
     }
@@ -212,7 +218,14 @@
     .cPost.ipsComment:not( .ipsComment_selected):not( .ipsModerated) .cAuthorPane,
     .ipsTabs_panels.ipsTabs_contained,
     .cPastLeaders_title span,
-    .cke_inner
+    .cke_inner,
+    .ipsSideMenu_itemActive a,
+    a.ipsSideMenu_itemActive,
+    span.ipsSideMenu_itemActive,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span
     {
         background-color: transparent;
     }
@@ -231,14 +244,6 @@
     .cbDisconnect
     {
         background-color: #2A3E52;
-    }
-
-    iframe[data-embedContent].ipsEmbed_finishedLoading,
-    #elProfileStats,
-    #elClubControls .ipsTabs,
-    .cke_toolbar_separator
-    {
-        background-color: #151f28;
     }
 
 
@@ -275,7 +280,11 @@
     .ipsButtonRow li > span,
     hr.ipsHr,
     .ipsApp select:not( [multiple]),
-    .ipsQuote_citation
+    .ipsQuote_citation,
+    iframe[data-embedContent].ipsEmbed_finishedLoading,
+    #elProfileStats,
+    #elClubControls .ipsTabs,
+    .cke_toolbar_separator
     {
         background-color: #19242f;
     }
@@ -426,7 +435,20 @@
     .ipsType_pageTitle[data-role="editableTitle"]:hover,
     .ipsType_editable:hover,
     .ipsTooltip,
-    #elErrorMessage
+    #elErrorMessage,
+    select[disabled] > option,
+    .ipsSelectTree_placeholder,
+    .ipsSideMenu_itemActive a,
+    a.ipsSideMenu_itemActive,
+    span.ipsSideMenu_itemActive,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span,
+    .ipsSelectTree_itemDisabled > [data-role="nodeTitle"],
+    .ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled):hover,
+    .main_menu .dropdown_menu .ipsMenu_title,
+    .ipsType_veryLarge
     {
         Color: #C5C5C5;
     }
@@ -484,7 +506,21 @@
     .fa-reorder:before,
     .fa-bars:before,
     .icon-spinner2:before,
-    .fa-exclamation-circle:before
+    .fa-exclamation-circle:before,
+    .fa-chevron-down:before,
+    .ipsSideMenu_withChecks .ipsSideMenu_itemActive a:after,
+    .ipsSideMenu_withChecks a.ipsSideMenu_itemActive:after,
+    .ipsSideMenu_withChecks span.ipsSideMenu_itemActive:after,
+    .ipsSideMenu_withRadios .ipsSideMenu_itemActive a:after,
+    .ipsSideMenu_withRadios a.ipsSideMenu_itemActive:after,
+    .ipsSideMenu_withRadios span.ipsSideMenu_itemActive:after,
+    .ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect) a:before,
+    .ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect) > span:before,
+    .ipsMenu_selectable .ipsMenu_item:not( .ipsMenu_itemNonSelect) button:before,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a:after,
+    .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span:not(.ipsSideMenu_noCheck):after,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a:after,
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span:not(.ipsSideMenu_noCheck):after
     {
         color: #bdbdbd;
     }
@@ -563,7 +599,8 @@
     .main_menu > li.selected.dropdown:not(:hover) > a,
     .main_menu > li:not(.dropdown) > a:active,
     html[dir="ltr"] .ipsStream.ipsStream_withTimeline,
-    .ipsComment.ipsComment_selected
+    .ipsComment.ipsComment_selected,
+    html[dir="ltr"] .cStreamForm_nodes
     {
         border-color: #276899;
     }
@@ -590,7 +627,8 @@
     .ipsApp .ipsButton_veryLight,
     .ipsApp .ipsButton_important,
     .ipsApp .ipsButton_link,
-    html[dir="ltr"] .ipsButton_split > li:not( :first-child) > .ipsButton
+    html[dir="ltr"] .ipsButton_split > li:not( :first-child) > .ipsButton,
+    .ipsSelectTree_nodes [data-role="nodeList"]
     {
         border-color: transparent;
     }
@@ -612,7 +650,10 @@
     .ipsTabs_panels.ipsTabs_contained,
     .cPastLeaders_title:before,
     .ipsHovercard,
-    .ipsApp select
+    .ipsApp select,
+    .ipsSelectTree,
+    .ipsSelectTree_nodes,
+    .ipsSelectTree_active.ipsSelectTree_top
     {
         border-color: #101921;
     }
@@ -833,6 +874,11 @@
         filter: grayscale(47%) hue-rotate(360deg) saturate(125%) contrast(56%);
     }
 
+    .ipsEmoji[data-src][data-loading]
+    {
+        animation: none;
+    }
+
     #elSearchExpanded
     {
         border-radius: 0px 0px 5px 5px;
@@ -842,6 +888,11 @@
     .cke_combo_arrow
     {
         border-top-color: #c5c5c5;
+    }
+
+    .ipsSelectTree
+    {
+        background: #242f3d !important;
     }
 
     ::-webkit-input-placeholder
@@ -934,6 +985,16 @@
     .ipsMenu.ipsMenu_topCenter:after
     {
         border-color: #17222d transparent transparent transparent;
+    }
+
+    .ipsMenu.ipsMenu_bottomLeft:before
+    {
+        border-color: transparent transparent #121b24 transparent;
+    }
+
+    .ipsMenu.ipsMenu_bottomLeft:after
+    {
+        border-color: transparent transparent #1f2936 transparent;
     }
 
     .ipsHovercard_stemTop .ipsHovercard_stem:before
