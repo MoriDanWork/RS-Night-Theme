@@ -225,7 +225,8 @@
     .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ a,
     .ipsSideMenu_withChecks .ipsSideMenu_item > input[type="checkbox"]:checked ~ span,
     .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ a,
-    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span
+    .ipsSideMenu_withRadios .ipsSideMenu_item > input[type="radio"]:checked ~ span,
+    .ipsDialog .ipsDialog_loading
     {
         background-color: transparent;
     }
@@ -601,7 +602,8 @@
     .main_menu > li:not(.dropdown) > a:active,
     html[dir="ltr"] .ipsStream.ipsStream_withTimeline,
     .ipsComment.ipsComment_selected,
-    html[dir="ltr"] .cStreamForm_nodes
+    html[dir="ltr"] .cStreamForm_nodes,
+    .ipsLoading:before
     {
         border-color: #276899;
     }
