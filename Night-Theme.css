@@ -736,7 +736,7 @@
     {
         background: #3a434b;
     }
-    
+
     #snow_toggle_button.enabled:hover > .switcher
     {
         background: #1e7abf;
@@ -751,7 +751,7 @@
     {
         border-left: 0;
     }
-    
+
     .ipsQuote_citation
     {
         margin: 0px -16px;
@@ -901,7 +901,7 @@
     {
         border-color: transparent #242F3D transparent transparent;
     }
-    
+
     .ipsHovercard_loading:after
     {
         border-color: #242F3D transparent transparent transparent;
@@ -931,14 +931,16 @@
     {
         border-color: #101921 transparent transparent transparent;
     }
-    
-    .ipsTooltip.ipsTooltip_top:after {
-	border-color: #283a4d transparent transparent transparent;
-}
 
-.ipsTooltip.ipsTooltip_bottom:after {
-	border-color: transparent transparent #283a4d transparent;
-}
+    .ipsTooltip.ipsTooltip_top:after
+    {
+        border-color: #283a4d transparent transparent transparent;
+    }
+
+    .ipsTooltip.ipsTooltip_bottom:after
+    {
+        border-color: transparent transparent #283a4d transparent;
+    }
 
     html[dir="ltr"] .ipsTags .ipsTag:before,
     html[dir="ltr"] .ipsTag_prefix:before
@@ -951,9 +953,16 @@
         content: '🐸';
     }
 
+    .main_menu > li > a,
+    .main_menu > li > a:before,
+    .main_menu > li > a:after
+    {
+        background: url("https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Menu_Hover.png") repeat-x 0 44px;
+    }
+
     .ipsApp select:not( [multiple])
     {
-        background-image: url("https://redserver.su/forum/public/set_resources_7/84c1e40ea0e759e3f1505eb1788ddf3c_select_dropdown.png");
+        background-image: url("https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Select_dropdown.png");
     }
 
     .cke_button__bold_icon
