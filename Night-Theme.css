@@ -94,7 +94,8 @@
     .ipsHovercard_loading,
     .cke_combo_off a.cke_combo_button:hover,
     .cke_combo_off a.cke_combo_button:focus,
-    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
+    .cke_combo_off a.cke_combo_button:active,
+    .cke_combo_on a.cke_combo_button
     {
         background-color: #242f3d;
     }
@@ -671,7 +672,8 @@
     .ipsApp input[type="url"]:hover,
     .ipsApp .ipsField_dummy:hover,
     a.cke_combo_button,
-    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
+    .cke_combo_off a.cke_combo_button:active,
+    .cke_combo_on a.cke_combo_button
     {
         border-color: #242f3d;
     }
@@ -715,7 +717,11 @@
     .ipsApp .ipsField_dummy:focus,
     a.cke_combo_button,
     .ipsComment.ipsComment_selected,
-    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
+    .cke_combo_off a.cke_combo_button:active,
+    .cke_combo_on a.cke_combo_button,
+    .cke_combo_on a.cke_combo_button:hover,
+    .cke_combo_on a.cke_combo_button:focus,
+    .cke_combo_on a.cke_combo_button:active
     {
         box-shadow: none;
     }
@@ -786,7 +792,8 @@
     }
 
     a.cke_combo_button,
-    .cke_combo_off a.cke_combo_button:hover, .cke_combo_off a.cke_combo_button:focus
+    .cke_combo_off a.cke_combo_button:hover,
+    .cke_combo_off a.cke_combo_button:focus
     {
         background-image: none !important;
     }
@@ -830,7 +837,7 @@
     {
         border-radius: 0px 0px 5px 5px;
     }
-    
+
     .cke_button_arrow,
     .cke_combo_arrow
     {
