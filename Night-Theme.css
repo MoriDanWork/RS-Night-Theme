@@ -448,7 +448,8 @@
     .ipsSelectTree_itemDisabled > [data-role="nodeTitle"],
     .ipsSelectTree_nodes [data-role="nodeList"] li .ipsSelectTree_item:not( .ipsSelectTree_itemDisabled):hover,
     .main_menu .dropdown_menu .ipsMenu_title,
-    .ipsType_veryLarge
+    .ipsType_veryLarge,
+    .cPollVoteBar > span:after
     {
         Color: #C5C5C5;
     }
