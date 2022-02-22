@@ -66,8 +66,6 @@
     a.cke_button_disabled:hover,
     a.cke_button_disabled:focus,
     a.cke_button_disabled:active,
-    .cke_combo_off a.cke_combo_button:hover,
-    .cke_combo_off a.cke_combo_button:focus,
     .ipsSideMenu_item:not( .ipsSideMenu_itemActive) a:hover,
     a.ipsSideMenu_item:not( .ipsSideMenu_itemActive):hover,
     span.ipsSideMenu_item:not( .ipsSideMenu_itemActive):hover,
@@ -77,7 +75,6 @@
     .ipsAlert,
     .ipsPagination .ipsPagination_page.ipsPagination_active a,
     .ipsButtonBar .ipsPagination .ipsPagination_page.ipsPagination_active a,
-    a.cke_combo_button,
     .cke_wysiwyg_frame,
     .cke_wysiwyg_div,
     .main_menu > li.dropdown .dropdown_menu > a:active,
@@ -94,7 +91,10 @@
     .cPost.ipsComment_selected:not( .ipsComment_moderated),
     .ipsModerated,
     body.unloaded #ipsEmbedLoading,
-    .ipsHovercard_loading
+    .ipsHovercard_loading,
+    .cke_combo_off a.cke_combo_button:hover,
+    .cke_combo_off a.cke_combo_button:focus,
+    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
     {
         background-color: #242f3d;
     }
@@ -163,7 +163,8 @@
     p.ipsType_reset.ipsPad_half,
     a.cke_button_on,
     .ipsHovercard,
-    #elSearchExpanded .ipsSideMenu_list
+    #elSearchExpanded .ipsSideMenu_list,
+    a.cke_combo_button
     {
         background-color: #1b2734;
     }
@@ -423,7 +424,8 @@
     .ipsType_pageTitle [data-role="editableTitle"]:hover,
     .ipsType_pageTitle[data-role="editableTitle"]:hover,
     .ipsType_editable:hover,
-    .ipsTooltip
+    .ipsTooltip,
+    #elErrorMessage
     {
         Color: #C5C5C5;
     }
@@ -480,7 +482,8 @@
     .fa-navicon:before,
     .fa-reorder:before,
     .fa-bars:before,
-    .icon-spinner2:before
+    .icon-spinner2:before,
+    .fa-exclamation-circle:before
     {
         color: #bdbdbd;
     }
@@ -667,7 +670,8 @@
     .ipsApp input[type="email"]:hover,
     .ipsApp input[type="url"]:hover,
     .ipsApp .ipsField_dummy:hover,
-    a.cke_combo_button
+    a.cke_combo_button,
+    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
     {
         border-color: #242f3d;
     }
@@ -710,7 +714,8 @@
     .ipsApp input[type="url"]:focus,
     .ipsApp .ipsField_dummy:focus,
     a.cke_combo_button,
-    .ipsComment.ipsComment_selected
+    .ipsComment.ipsComment_selected,
+    .cke_combo_off a.cke_combo_button:active, .cke_combo_on a.cke_combo_button
     {
         box-shadow: none;
     }
@@ -780,9 +785,10 @@
         outline: 1px solid #276899 !important;
     }
 
-    a.cke_combo_button
+    a.cke_combo_button,
+    .cke_combo_off a.cke_combo_button:hover, .cke_combo_off a.cke_combo_button:focus
     {
-        background-image: none;
+        background-image: none !important;
     }
 
     .ipsComposeArea_dummy,
@@ -823,6 +829,12 @@
     #elSearchExpanded
     {
         border-radius: 0px 0px 5px 5px;
+    }
+    
+    .cke_button_arrow,
+    .cke_combo_arrow
+    {
+        border-top-color: #c5c5c5;
     }
 
     ::-webkit-input-placeholder
@@ -952,6 +964,49 @@
     {
         content: '🐸';
     }
+
+    CKEDITOR.stylesSet.add( 'my_styles',
+    [ // Block-level styles.
+    {
+        name: 'Blue Title',
+        element: 'h2',
+        styles:
+        {
+            color: 'Blue'
+        }
+    }
+
+    ,
+    {
+        name: 'Red Title',
+        element: 'h3',
+        styles:
+        {
+            color: 'Red'
+        }
+    }
+
+    , // Inline styles.
+    {
+        name: 'CSS Style',
+        element: 'span',
+        attributes:
+        {
+            'class': 'my_style'
+        }
+    }
+
+    ,
+    {
+        name: 'Marker: Yellow',
+        element: 'span',
+        styles:
+        {
+            'background-color': 'Yellow'
+        }
+    }
+
+    ]);
 
     .main_menu > li > a,
     .main_menu > li > a:before,
