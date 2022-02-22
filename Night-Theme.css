@@ -499,7 +499,6 @@
     .fa-pencil-square:before,
     .fa-user:before,
     .fa-plus:before,
-    .fa-star:before,
     .fa-search:before,
     .fa-fire:before,
     .fa-navicon:before,
@@ -535,7 +534,8 @@
     .main_menu > li.dropdown:hover > a,
     .main_menu > li.dropdown:hover:after,
     .ipsType_noLinkStyling:hover,
-    .ipsModerated a
+    .ipsModerated a,
+    .ipsRating .ipsRating_on .fa-star
     {
         color: #5080B6;
     }
