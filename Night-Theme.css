@@ -991,6 +991,16 @@
         border-color: #242F3D transparent transparent transparent;
     }
 
+    .ipsMenu.ipsMenu_topRight:after
+    {
+        border-color: #17222d transparent transparent transparent;
+    }
+
+    .ipsMenu.ipsMenu_topRight:before
+    {
+        border-color: #111a22 transparent transparent transparent;
+    }
+
     html[dir="ltr"] .ipsStream_withTimeline .ipsStreamItem.ipsStreamItem_contentBlock:before
     {
         border-color: transparent #17222d transparent transparent;
