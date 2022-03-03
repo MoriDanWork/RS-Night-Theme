@@ -1070,90 +1070,28 @@
         background-image: url("https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Select_dropdown.png");
     }
 
-    .cke_button__bold_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 0px !important;
-    }
-
-    .cke_button__italic_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -24px !important;
-    }
-
-    .cke_button__underline_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -120px !important;
-    }
-
-    .cke_button__strike_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -48px !important;
-    }
-
-    .cke_button__removeformat_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -912px !important;
-    }
-
-    .cke_button__justifyleft_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -768px !important;
-    }
-
-    .cke_button__justifycenter_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -744px !important;
-    }
-
-    .cke_button__justifyright_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -792px !important;
-    }
-
-    .cke_button__justifyblock_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -720px !important;
-    }
-
-    .cke_ltr .cke_button__numberedlist_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -888px !important;
-    }
-
-    .cke_ltr .cke_button__bulletedlist_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -840px !important;
-    }
-
-    .cke_button__textcolor_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -312px !important;
-    }
-
-    .cke_button__ipsemoticon_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -456px !important;
-    }
-
-    .cke_button__ipsquote_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -672px !important;
-    }
-
-    .cke_button__ipslink_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -528px !important;
-    }
-
-    .cke_button__ipscode_icon
-    {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -432px !important;
-    }
-
+    /* Editor */
+    .cke_button__bold_icon,
+    .cke_button__italic_icon,
+    .cke_button__underline_icon,
+    .cke_button__strike_icon,
+    .cke_button__removeformat_icon,
+    .cke_button__justifyleft_icon,
+    .cke_button__justifycenter_icon,
+    .cke_button__justifyright_icon,
+    .cke_button__justifyblock_icon,
+    .cke_button__numberedlist_icon,
+    .cke_button__bulletedlist_icon,
+    .cke_button__textcolor_icon,
+    .cke_button__ipsemoticon_icon,
+    .cke_button__ipsquote_icon,
+    .cke_button__ipslink_icon,
+    .cke_button__ipscode_icon,
     .cke_button__ipsspoiler_icon
     {
-        background: url(https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png) no-repeat 0 -696px !important;
+        background-image: url("https://raw.githubusercontent.com/MoriDanWork/RS-Night-Theme/main/Resourses/Buttons.png") !important;
     }
+
 }
 
 /* Spasibo za Beta Test, Semnadtsataia <3 🐸*/
